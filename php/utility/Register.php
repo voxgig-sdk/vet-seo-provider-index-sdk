@@ -1,0 +1,72 @@
+<?php
+declare(strict_types=1);
+
+// VetSeoProviderIndex SDK utility registration
+
+require_once __DIR__ . '/../core/UtilityType.php';
+require_once __DIR__ . '/Clean.php';
+require_once __DIR__ . '/Done.php';
+require_once __DIR__ . '/MakeError.php';
+require_once __DIR__ . '/FeatureAdd.php';
+require_once __DIR__ . '/FeatureHook.php';
+require_once __DIR__ . '/FeatureInit.php';
+require_once __DIR__ . '/Fetcher.php';
+require_once __DIR__ . '/MakeFetchDef.php';
+require_once __DIR__ . '/MakeContext.php';
+require_once __DIR__ . '/MakeOptions.php';
+require_once __DIR__ . '/MakeRequest.php';
+require_once __DIR__ . '/MakeResponse.php';
+require_once __DIR__ . '/MakeResult.php';
+require_once __DIR__ . '/MakePoint.php';
+require_once __DIR__ . '/MakeSpec.php';
+require_once __DIR__ . '/MakeUrl.php';
+require_once __DIR__ . '/Param.php';
+require_once __DIR__ . '/PrepareAuth.php';
+require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/Graphql.php';
+require_once __DIR__ . '/PrepareHeaders.php';
+require_once __DIR__ . '/PrepareMethod.php';
+require_once __DIR__ . '/PrepareParams.php';
+require_once __DIR__ . '/PreparePath.php';
+require_once __DIR__ . '/PrepareQuery.php';
+require_once __DIR__ . '/ResultBasic.php';
+require_once __DIR__ . '/ResultBody.php';
+require_once __DIR__ . '/ResultHeaders.php';
+require_once __DIR__ . '/TransformRequest.php';
+require_once __DIR__ . '/TransformResponse.php';
+
+VetSeoProviderIndexUtility::setRegistrar(function (VetSeoProviderIndexUtility $u): void {
+    $u->clean = [VetSeoProviderIndexClean::class, 'call'];
+    $u->clean_add = [VetSeoProviderIndexClean::class, 'add'];
+    $u->clean_explain = [VetSeoProviderIndexDone::class, 'clean_explain'];
+    $u->done = [VetSeoProviderIndexDone::class, 'call'];
+    $u->make_error = [VetSeoProviderIndexMakeError::class, 'call'];
+    $u->feature_add = [VetSeoProviderIndexFeatureAdd::class, 'call'];
+    $u->feature_hook = [VetSeoProviderIndexFeatureHook::class, 'call'];
+    $u->feature_init = [VetSeoProviderIndexFeatureInit::class, 'call'];
+    $u->fetcher = [VetSeoProviderIndexFetcher::class, 'call'];
+    $u->make_fetch_def = [VetSeoProviderIndexMakeFetchDef::class, 'call'];
+    $u->make_context = [VetSeoProviderIndexMakeContext::class, 'call'];
+    $u->make_options = [VetSeoProviderIndexMakeOptions::class, 'call'];
+    $u->make_request = [VetSeoProviderIndexMakeRequest::class, 'call'];
+    $u->make_response = [VetSeoProviderIndexMakeResponse::class, 'call'];
+    $u->make_result = [VetSeoProviderIndexMakeResult::class, 'call'];
+    $u->make_point = [VetSeoProviderIndexMakePoint::class, 'call'];
+    $u->make_spec = [VetSeoProviderIndexMakeSpec::class, 'call'];
+    $u->make_url = [VetSeoProviderIndexMakeUrl::class, 'call'];
+    $u->param = [VetSeoProviderIndexParam::class, 'call'];
+    $u->prepare_auth = [VetSeoProviderIndexPrepareAuth::class, 'call'];
+    $u->prepare_body = [VetSeoProviderIndexPrepareBody::class, 'call'];
+    $u->prepare_headers = [VetSeoProviderIndexPrepareHeaders::class, 'call'];
+    $u->prepare_method = [VetSeoProviderIndexPrepareMethod::class, 'call'];
+    $u->prepare_params = [VetSeoProviderIndexPrepareParams::class, 'call'];
+    $u->prepare_path = [VetSeoProviderIndexPreparePath::class, 'call'];
+    $u->prepare_query = [VetSeoProviderIndexPrepareQuery::class, 'call'];
+    $u->graphql_body = [VetSeoProviderIndexGraphql::class, 'body'];
+    $u->graphql_errors = [VetSeoProviderIndexGraphql::class, 'errors'];
+    $u->result_basic = [VetSeoProviderIndexResultBasic::class, 'call'];
+    $u->result_body = [VetSeoProviderIndexResultBody::class, 'call'];
+    $u->result_headers = [VetSeoProviderIndexResultHeaders::class, 'call'];
+    $u->transform_request = [VetSeoProviderIndexTransformRequest::class, 'call'];
+    $u->transform_response = [VetSeoProviderIndexTransformResponse::class, 'call'];
+});

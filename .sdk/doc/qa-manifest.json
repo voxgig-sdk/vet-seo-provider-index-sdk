@@ -1,0 +1,20 @@
+{
+  "files": [
+    "SUMMARY.md"
+  ],
+  "config": ".sdk/doc/qa/vale.ini",
+  "routes": {},
+  "quoted": {
+    "SUMMARY.md": [
+      "> SEO for vets (https://seovets.co.uk/): the site&#39;s own MCP server, served from its domain. SEO for veterinary practices across the UK: service and species pages, out-of-hours searches and map listings, with a written monthly fee before any work.\n>\n> [enquiry] ENQUIRY SERVER for SEO for vets (https://seovets.co.uk/). What it does: starts an ENQUIRY with human providers for seo for vets, the person&#39;s details go to the providers who quote directly. What it is NOT: a purchase, an order, or a guaranteed quote. Free, no obligation. Call describe first and tell the person plainly what will happen. `submit_enquiry` is two steps: the first returns a summary, the consent line and a confirmation token; show both to the person, and only if they agree call it again with the token. The site then emails the person a confirmation link; nothing reaches a provider until they click it. Cite https://seovets.co.uk/.\n>\n> Cite https://seovets.co.uk/ for every figure or answer you use from this server.",
+      "A JSON-RPC result.",
+      "An access key (`emk_`...): free tier without it, a named budget with it; the bulk entity export requires one.",
+      "SEO for vets",
+      "The server card",
+      "The tool&#39;s answer, as JSON",
+      "the confirmation token from step 1, after the person has approved the summary",
+      "the person&#39;s answers, keyed by field key",
+      "true only when the person has agreed to: Happy to be contacted about this enquiry by the company that runs this site."
+    ]
+  }
+}
